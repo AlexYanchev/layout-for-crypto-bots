@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import Chart from '../Chart/Chart';
 import BotList from '../BotList/BotList';
 import TimeRange from '../TimeRange/TimeRange';
+import ControlPanel from '../ControlPanel/ControlPanel';
 
 const Container = styled.main`
   background: radial-gradient(
@@ -21,6 +22,7 @@ const Main: FC = () => {
       <Chart />
       <BotList />
       <TimeRange />
+      <ControlPanel />
     </Container>
   );
 };
