@@ -5,6 +5,7 @@ import BotIcon from '../../asserts/Icons/BotIcon/BotIcon';
 import MegaBotIcon from '../../asserts/Icons/MegaBotIcon/MegaBotIcon';
 
 const Container = styled.div`
+  padding: 0 var(--padding-side);
   margin-top: 27px;
   display: flex;
   flex-wrap: wrap;

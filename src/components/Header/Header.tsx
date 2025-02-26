@@ -5,7 +5,7 @@ import RefreshIcon from '../../asserts/Icons/Refresh/Refresh';
 import Balance from '../Balance/Balance';
 
 const Container = styled.div`
-  padding: 0 32px;
+  padding: 0 var(--padding-side);
   margin-bottom: 45px;
 `;
 
