@@ -13,7 +13,7 @@ const Title = styled.p`
 
 const InfoContainer = styled.div`
   display: flex;
-  gap: 48px;
+  justify-content: space-between;
 `;
 
 const MoneyBalance = styled.p`

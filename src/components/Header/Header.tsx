@@ -6,6 +6,7 @@ import Balance from '../Balance/Balance';
 
 const Container = styled.div`
   padding: 0 32px;
+  margin-bottom: 45px;
 `;
 
 const HeaderContainer = styled.header`

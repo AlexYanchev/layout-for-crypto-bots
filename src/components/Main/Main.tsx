@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import Header from '../Header/Header';
+import Chart from '../Chart/Chart';
+import BotList from '../BotList/BotList';
 
 const Container = styled.main`
   background: radial-gradient(
@@ -8,13 +10,15 @@ const Container = styled.main`
     var(--top-radial-gradient) 5%,
     var(--main-background) 15%
   );
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 const Main: FC = () => {
   return (
     <Container>
       <Header />
+      <Chart />
+      <BotList />
     </Container>
   );
 };
