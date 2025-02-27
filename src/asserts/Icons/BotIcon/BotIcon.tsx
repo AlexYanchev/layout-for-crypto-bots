@@ -38,4 +38,4 @@ const BotIcon: FC<BotIconProps> = ({ fill, fullFill }) => {
   );
 };
 
-export default BotIcon;
+export default React.memo(BotIcon);

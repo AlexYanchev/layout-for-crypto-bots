@@ -51,4 +51,4 @@ const ButtonTool: FC<ButtonToolProps> = ({
   );
 };
 
-export default ButtonTool;
+export default React.memo(ButtonTool);

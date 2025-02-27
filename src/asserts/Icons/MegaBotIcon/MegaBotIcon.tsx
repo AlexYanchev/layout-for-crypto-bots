@@ -38,4 +38,4 @@ const MegaBotIcon: FC<MegaBotIconProps> = ({ fill, fullFill }) => {
   );
 };
 
-export default MegaBotIcon;
+export default React.memo(MegaBotIcon);

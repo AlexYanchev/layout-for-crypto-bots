@@ -34,4 +34,4 @@ const Notification: FC<NotificationProps> = ({ value }) => {
   );
 };
 
-export default Notification;
+export default React.memo(Notification);

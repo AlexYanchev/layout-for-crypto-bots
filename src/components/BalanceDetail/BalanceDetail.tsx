@@ -46,4 +46,4 @@ const BalanceDetail: FC<BalanceDetailProps> = ({ text, value }) => {
   );
 };
 
-export default BalanceDetail;
+export default React.memo(BalanceDetail);
