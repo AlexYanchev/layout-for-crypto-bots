@@ -41,7 +41,7 @@ const Text = styled.p<{
   text-align: center;
 
   font-size: 1.25rem;
-  color: #fff;
+  color: var(--accent-color);
   font-weight: 700;
   margin-top: 10px;
   max-width: 100px;
@@ -68,7 +68,7 @@ const Text = styled.p<{
 
 const Percent = styled.span<{ $negative?: boolean }>`
   display: block;
-  color: #78a659;
+  color: rgb(var(--positive-result-text-color));
 
   &::before {
     content: '+';
@@ -82,10 +82,10 @@ const Percent = styled.span<{ $negative?: boolean }>`
     return (
       $negative &&
       css`
-        color: #d2447b;
+        color: rgb(var(--negative-result-text-color));
 
         &::before {
-          content: '-';
+          content: '';
         }
       `
     );
@@ -100,37 +100,39 @@ const Picture = styled.div`
 
 interface BotProps {
   children: ReactNode;
+  name: string;
   text: string;
   percent?: number;
   textColor?: string;
   textMarginTop?: number;
-  negative?: boolean;
   emptyBot?: boolean;
   active?: boolean;
 }
 
 const Bot: FC<BotProps> = ({
   children,
+  name,
   text,
   percent,
   textColor,
   textMarginTop,
-  negative,
   emptyBot,
   active,
 }) => {
   return (
-    <Container $active={active}>
+    <Container $active={active} data-botname={name}>
       <InfoContainer>
         <Picture>{children}</Picture>
 
         <Text $textColor={textColor} $textMarginTop={textMarginTop}>
           {text}
-          {!emptyBot && <Percent $negative={negative}>{percent}</Percent>}
+          {!emptyBot && percent && (
+            <Percent $negative={percent < 0}>{percent}</Percent>
+          )}
         </Text>
       </InfoContainer>
     </Container>
   );
 };
 
-export default Bot;
+export default React.memo(Bot);

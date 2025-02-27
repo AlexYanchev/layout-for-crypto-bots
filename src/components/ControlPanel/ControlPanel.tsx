@@ -1,10 +1,11 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import styled, { css } from 'styled-components';
 import DashBoardIcon from '../../asserts/Icons/DashBoardIcon/DashBoardIcon';
 import MegabotToolIcon from '../../asserts/Icons/MegabotToolIcon/MegabotToolIcon';
 import BotMarketToolIcon from '../../asserts/Icons/BotMarketToolIcon/BotMarketToolIcon';
 import CoinPricesToolIcon from '../../asserts/Icons/CoinPricesToolIcon/CoinPricesToolIcon';
 import ProfileToolIcon from '../../asserts/Icons/ProfileToolIcon/ProfileToolIcon';
+import ButtonTool from '../ButtonTool/ButtonTool';
 
 const Container = styled.div`
   padding: 13px var(--padding-side);
@@ -14,49 +15,49 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
-const Button = styled.button<{ $active?: boolean }>`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  background: none;
-  border: none;
-  color: inherit;
-  font-size: 1.25rem;
-  font-weight: 300;
-
-  ${({ $active }) => {
-    return (
-      $active &&
-      css`
-        color: var(--accent-color);
-      `
-    );
-  }}
-`;
-
 const ControlPanel: FC = () => {
+  const [active, setActive] = useState<string>('Dashboard');
+
+  const onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const menuName = e.currentTarget.getAttribute('data-menuname');
+
+    if (!menuName) {
+      return;
+    }
+
+    setActive(menuName);
+  };
   return (
-    <Container>
-      <Button type='submit' $active={true}>
-        <DashBoardIcon />
-        Dashboard
-      </Button>
-      <Button type='submit'>
-        <MegabotToolIcon /> Megabot
-      </Button>
-      <Button type='submit'>
-        <BotMarketToolIcon />
-        Bot market
-      </Button>
-      <Button type='submit'>
-        <CoinPricesToolIcon />
-        Coin prices
-      </Button>
-      <Button type='submit'>
-        <ProfileToolIcon />
-        Profile
-      </Button>
+    <Container onClick={onClick}>
+      <ButtonTool
+        icon={<DashBoardIcon />}
+        data-menuname='Dashboard'
+        text='Dashboard'
+        active={active === 'Dashboard'}
+      />
+      <ButtonTool
+        icon={<MegabotToolIcon />}
+        data-menuname='Megabot'
+        text='Megabot'
+        active={active === 'Megabot'}
+      />
+      <ButtonTool
+        icon={<BotMarketToolIcon />}
+        data-menuname='Bot market'
+        text='Bot market'
+        active={active === 'Bot market'}
+      />
+      <ButtonTool
+        icon={<CoinPricesToolIcon />}
+        data-menuname='Coin prices'
+        text='Coin prices'
+        active={active === 'Coin prices'}
+      />
+      <ButtonTool
+        icon={<ProfileToolIcon />}
+        text='Profile'
+        notificationValue={3}
+      />
     </Container>
   );
 };

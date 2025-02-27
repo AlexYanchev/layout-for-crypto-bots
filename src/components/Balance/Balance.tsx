@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import BalanceDetail from '../BalanceDetail/BalanceDetail';
+import { useStoreContext } from '../../Providers/StoreProvider';
 
 const Container = styled.div`
   text-transform: uppercase;
@@ -20,6 +21,7 @@ const MoneyBalance = styled.p`
   font-size: 4.25rem;
   font-weight: 100;
   color: var(--accent-color);
+  text-transform: uppercase;
 `;
 
 const MoneyDetail = styled.div`
@@ -30,14 +32,27 @@ const MoneyDetail = styled.div`
 `;
 
 const Balance: FC = () => {
+  const { tradingCapital, currency, balance, hold } = useStoreContext<{
+    tradingCapital: number;
+    currency: string;
+    balance: number;
+    hold: number;
+  }>((state) => ({
+    tradingCapital: state.data.trading_capital,
+    currency: state.data.trading_capital_currency,
+    balance: state.data.balance,
+    hold: state.data.on_hold,
+  }));
   return (
     <Container>
       <Title>Trading capital</Title>
       <InfoContainer>
-        <MoneyBalance>1.00865 BTC</MoneyBalance>
+        <MoneyBalance>
+          {tradingCapital} {currency}
+        </MoneyBalance>
         <MoneyDetail>
-          <BalanceDetail text='Balance' value={10850} />
-          <BalanceDetail text='On hold' value={24000} />
+          <BalanceDetail text='Balance' value={balance} />
+          <BalanceDetail text='On hold' value={hold} />
         </MoneyDetail>
       </InfoContainer>
     </Container>

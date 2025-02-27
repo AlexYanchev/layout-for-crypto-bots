@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 import styled, { css } from 'styled-components';
+import { useStoreContext } from '../../Providers/StoreProvider';
+import { E_TimeRange } from '../../types/E_TimeRange';
 
 const Container = styled.div`
   padding: 31px var(--padding-side);
@@ -39,13 +41,54 @@ const Button = styled.button<{ $active?: boolean }>`
 interface TimeRangeProps {}
 
 const TimeRange: FC<TimeRangeProps> = () => {
+  const { currentTimeRange, setCurrentTimeRange } = useStoreContext(
+    (state) => ({
+      currentTimeRange: state.currentTimeRange,
+      setCurrentTimeRange: state.setCurrentTimeRange,
+    })
+  );
+
+  const onClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const timeRange = e.currentTarget.getAttribute(
+      'data-timerange'
+    ) as E_TimeRange | null;
+    if (!timeRange) {
+      return;
+    }
+
+    setCurrentTimeRange(timeRange);
+  };
   return (
     <Container>
       <Title>Time range:</Title>
-      <Button>24h</Button>
-      <Button>7 days</Button>
-      <Button>30 days</Button>
-      <Button $active={true}>All time</Button>
+      <Button
+        onClick={onClick}
+        $active={currentTimeRange === E_TimeRange['24H']}
+        data-timerange={E_TimeRange['24H']}
+      >
+        24h
+      </Button>
+      <Button
+        onClick={onClick}
+        $active={currentTimeRange === E_TimeRange['7D']}
+        data-timerange={E_TimeRange['7D']}
+      >
+        7 days
+      </Button>
+      <Button
+        onClick={onClick}
+        $active={currentTimeRange === E_TimeRange['30D']}
+        data-timerange={E_TimeRange['30D']}
+      >
+        30 days
+      </Button>
+      <Button
+        onClick={onClick}
+        $active={currentTimeRange === E_TimeRange.ALL_TIME}
+        data-timerange={E_TimeRange.ALL_TIME}
+      >
+        All time
+      </Button>
     </Container>
   );
 };

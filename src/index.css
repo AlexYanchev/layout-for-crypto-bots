@@ -10,6 +10,11 @@
   --main-element-color: #546076;
   --accent-color: #fff;
   --padding-side: 30px;
+
+  --notification-color: 228, 151, 45;
+
+  --positive-result-text-color: 120, 166, 89;
+  --negative-result-text-color: 210, 68, 122;
 }
 
 body {
