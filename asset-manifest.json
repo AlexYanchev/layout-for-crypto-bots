@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/layout-for-crypto-bots/static/css/main.a4c3ce30.css",
+    "main.js": "/layout-for-crypto-bots/static/js/main.d9c5266b.js",
+    "index.html": "/layout-for-crypto-bots/index.html",
+    "main.a4c3ce30.css.map": "/layout-for-crypto-bots/static/css/main.a4c3ce30.css.map",
+    "main.d9c5266b.js.map": "/layout-for-crypto-bots/static/js/main.d9c5266b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4c3ce30.css",
+    "static/js/main.d9c5266b.js"
+  ]
+}
