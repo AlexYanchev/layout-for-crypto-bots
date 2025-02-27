@@ -11,6 +11,7 @@ const Container = styled.div<{ $active?: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   ${({ $active }) => {
     return (

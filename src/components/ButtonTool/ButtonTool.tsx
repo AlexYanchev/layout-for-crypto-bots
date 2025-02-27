@@ -16,6 +16,7 @@ const Button = styled.button<{ $active?: boolean }>`
   color: inherit;
   font-size: 1.25rem;
   font-weight: 300;
+  cursor: pointer;
 
   ${({ $active }) => {
     return (
@@ -41,7 +42,7 @@ const ButtonTool: FC<ButtonToolProps> = ({
   notificationValue,
 }) => {
   return (
-    <Container>
+    <Container data-menuname={text}>
       {notificationValue && <Notification value={notificationValue} />}
       <Button type='button' $active={active}>
         {icon}
