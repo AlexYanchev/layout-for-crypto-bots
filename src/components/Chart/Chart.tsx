@@ -75,7 +75,10 @@ const Chart: FC = () => {
   );
 
   const cardinal = curveCardinal.tension(0.2);
-  const marginBottomTick = 30;
+
+  const marginBottomTick =
+    window.screen.availWidth > 784 ? 30 : 0.0382 * window.screen.availWidth;
+
   const tickLabels: Array<{ order: number; tickName: string }> = [
     { order: 3, tickName: '22.04' },
     { order: 9, tickName: '23.04' },

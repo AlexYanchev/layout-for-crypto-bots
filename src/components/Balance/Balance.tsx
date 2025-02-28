@@ -17,12 +17,9 @@ const InfoContainer = styled.div`
   justify-content: space-between;
 `;
 
-// font-size: 4.25rem;
-// font-size: clamp(1.5rem, 8.67vw, 4.25rem);
-
 const MoneyBalance = styled.p`
   font-size: clamp(2rem, 8.67vw, 4.25rem);
-  font-weight: 100;
+  font-weight: 300;
   color: var(--accent-color);
   text-transform: uppercase;
 `;

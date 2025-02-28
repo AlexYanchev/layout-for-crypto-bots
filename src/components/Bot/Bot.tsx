@@ -7,7 +7,7 @@ const Container = styled.div<{ $active?: boolean }>`
   width: 100%;
   height: 100%;
   background: #252d40;
-  border-radius: 10px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;

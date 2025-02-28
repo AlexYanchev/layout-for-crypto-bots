@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const Container = styled.div`
   position: relative;
   cursor: pointer;
-  width: 35px;
-  height: 24px;
+  width: min(4.46vw, 35px);
+  height: min(3.06vw, 24px);
 `;
 
 const Input = styled.input`
@@ -27,7 +27,7 @@ const Label = styled.label`
 
   &::before {
     top: 0;
-    box-shadow: 0 11px 0 var(--main-element-color);
+    box-shadow: 0 min(1.4vw, 11px) 0 var(--main-element-color);
     transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
   }
 

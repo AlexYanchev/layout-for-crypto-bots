@@ -25,6 +25,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   color: var(--main-element-color);
+
+  /* max-width: 784px; */
+  height: 100vh;
+  min-width: 375px;
 }
 
 code {

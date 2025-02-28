@@ -10,7 +10,7 @@ const Container = styled.div`
 `;
 
 const HeaderContainer = styled.header`
-  height: 150px;
+  height: min(19.13vw, 150px);
   display: flex;
   align-items: center;
   justify-content: space-between;
