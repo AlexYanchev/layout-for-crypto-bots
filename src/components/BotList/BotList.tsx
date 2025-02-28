@@ -8,7 +8,7 @@ import { T_NamesBots } from '../../types/T_NamesBots';
 
 const Container = styled.div`
   padding: 0 var(--padding-side);
-  margin-top: 27px;
+  margin: 27px auto 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2px;
