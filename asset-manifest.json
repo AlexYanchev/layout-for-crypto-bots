@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/layout-for-crypto-bots/static/css/main.a4c3ce30.css",
-    "main.js": "/layout-for-crypto-bots/static/js/main.35f76a82.js",
+    "main.css": "/layout-for-crypto-bots/static/css/main.51a94cd3.css",
+    "main.js": "/layout-for-crypto-bots/static/js/main.f3249daa.js",
     "index.html": "/layout-for-crypto-bots/index.html",
-    "main.a4c3ce30.css.map": "/layout-for-crypto-bots/static/css/main.a4c3ce30.css.map",
-    "main.35f76a82.js.map": "/layout-for-crypto-bots/static/js/main.35f76a82.js.map"
+    "main.51a94cd3.css.map": "/layout-for-crypto-bots/static/css/main.51a94cd3.css.map",
+    "main.f3249daa.js.map": "/layout-for-crypto-bots/static/js/main.f3249daa.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4c3ce30.css",
-    "static/js/main.35f76a82.js"
+    "static/css/main.51a94cd3.css",
+    "static/js/main.f3249daa.js"
   ]
 }
