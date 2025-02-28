@@ -17,7 +17,7 @@ const HeaderContainer = styled.header`
 `;
 
 const Logo = styled.p`
-  font-size: 2rem;
+  font-size: min(1.5rem, 4.08vw, 2rem);
   font-weight: 700;
 `;
 

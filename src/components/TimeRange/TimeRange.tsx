@@ -4,26 +4,26 @@ import { useStoreContext } from '../../Providers/StoreProvider';
 import { E_TimeRange } from '../../types/E_TimeRange';
 
 const Container = styled.div`
-  padding: 31px var(--padding-side);
+  padding: min(3.95vw, 31px) var(--padding-side);
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
+  gap: min(2.55vw, 20px);
 `;
 
 const Title = styled.p`
-  font-size: 1.5rem;
+  font-size: min(3.06vw, 1.5rem);
   color: inherit;
   font-weight: 700;
 `;
 
 const Button = styled.button<{ $active?: boolean }>`
   color: inherit;
-  min-width: 115px;
+  min-width: min(14.66vw, 115px);
   background: none;
   border-radius: 100px;
-  padding: 12px 15px;
-  font-size: 1.5rem;
+  padding: min(1.53vw, 12px) min(1.91vw, 15px);
+  font-size: min(3.06vw, 1.5rem);
   font-weight: 400;
   border: 1px solid #546076;
 

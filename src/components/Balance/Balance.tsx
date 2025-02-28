@@ -8,7 +8,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.p`
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 3.06vw, 1.5rem);
   font-weight: 700;
 `;
 
@@ -17,8 +17,11 @@ const InfoContainer = styled.div`
   justify-content: space-between;
 `;
 
+// font-size: 4.25rem;
+// font-size: clamp(1.5rem, 8.67vw, 4.25rem);
+
 const MoneyBalance = styled.p`
-  font-size: 4.25rem;
+  font-size: clamp(2rem, 8.67vw, 4.25rem);
   font-weight: 100;
   color: var(--accent-color);
   text-transform: uppercase;
@@ -28,7 +31,7 @@ const MoneyDetail = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 6px;
+  gap: clamp(0, 0.76vw, 6px);
 `;
 
 const Balance: FC = () => {

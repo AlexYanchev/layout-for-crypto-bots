@@ -1,13 +1,16 @@
 import React, { FC } from 'react';
 
+//width='30.000000'
+
 const HMoneyIcon: FC = () => {
   return (
     <svg
       version='1.0'
       xmlns='http://www.w3.org/2000/svg'
-      width='30.000000'
-      height='30.000000'
+      width='clamp(1rem, 3.82vw, 30px)'
+      height='clamp(1rem, 3.82vw, 30px)'
       viewBox='0 0 30.000000 30.000000'
+      // viewBox='0 0 30.000000 30.000000'
       preserveAspectRatio='xMidYMid meet'
     >
       <g

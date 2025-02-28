@@ -9,8 +9,9 @@ const MegabotToolIcon: FC<MegabotToolIconProps> = ({ active }) => {
     <svg
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
-      width='44px'
-      height='44px'
+      width='min(5.61vw, 44px)'
+      height='min(5.61vw, 44px)'
+      viewBox='0 0 44 44'
     >
       <path
         fillRule='evenodd'

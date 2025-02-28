@@ -3,9 +3,9 @@ import styled, { css } from 'styled-components';
 import BotIcon from '../../asserts/Icons/BotIcon/BotIcon';
 
 const Container = styled.div<{ $active?: boolean }>`
+  aspect-ratio: 1/1;
   width: 100%;
-  max-width: 228px;
-  height: 228px;
+  height: 100%;
   background: #252d40;
   border-radius: 10px;
   display: flex;
@@ -37,11 +37,11 @@ const Text = styled.p<{
   $textColor?: string | undefined;
   $textMarginTop?: number | undefined;
 }>`
-  line-height: 1.5rem;
+  line-height: clamp(1rem, 3.06vw, 1.5rem);
   text-transform: uppercase;
   text-align: center;
 
-  font-size: 1.25rem;
+  font-size: clamp(0.8rem, 2.55vw, 1.25rem);
   color: var(--accent-color);
   font-weight: 700;
   margin-top: 10px;
@@ -92,10 +92,9 @@ const Percent = styled.span<{ $negative?: boolean }>`
     );
   }}
 `;
-
 const Picture = styled.div`
   display: flex;
-  height: 90px;
+  height: min(11.47vw, 90px);
   align-items: center;
 `;
 

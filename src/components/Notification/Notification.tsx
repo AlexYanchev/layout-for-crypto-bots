@@ -5,16 +5,16 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 35px;
-  height: 35px;
+  min-width: min(4.46vw, 35px);
+  height: min(4.46vw, 35px);
   border-radius: 100px;
   background: rgba(var(--notification-color), 1);
   position: absolute;
-  right: -12px;
-  top: -22px;
+  right: max(-1.53vw, -12px);
+  top: max(-2.8vw, -22px);
   color: var(--accent-color);
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: min(3.06vw, 1.5rem);
+  line-height: min(3.06vw, 1.5rem);
   font-weight: 600;
 
   & > * {

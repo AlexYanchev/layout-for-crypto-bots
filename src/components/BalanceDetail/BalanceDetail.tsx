@@ -7,19 +7,21 @@ interface BalanceDetailProps {
   value: number;
 }
 
+//gap: 25px;
 const Container = styled.div`
   display: flex;
-  gap: 25px;
+  gap: clamp(10px, 3.18vw, 25px);
   justify-content: space-between;
   width: 100%;
 `;
 
+//font-size: 1.5rem;
 const Text = styled.p`
   display: flex;
   align-items: center;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 3.06vw, 1.5rem);
 `;
 
 const NumberContainer = styled.div`
@@ -28,9 +30,10 @@ const NumberContainer = styled.div`
   gap: 5px;
 `;
 
+//font-size: 1.5rem;
 const Number = styled.span`
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 3.06vw, 1.5rem);
   color: white;
 `;
 

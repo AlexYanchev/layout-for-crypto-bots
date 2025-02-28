@@ -9,11 +9,10 @@ import { T_NamesBots } from '../../types/T_NamesBots';
 const Container = styled.div`
   padding: 0 var(--padding-side);
   margin-top: 27px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2px;
-  justify-content: center;
-  align-items: center;
+  max-width: 784px;
 `;
 
 const botNameMap: Record<T_NamesBots, { text: string; fill: string }> = {
@@ -55,6 +54,18 @@ const BotList: FC = () => {
   return (
     <Container onClick={onClick}>
       {botList.map((bot, index) => {
+        if (index === botList.length - 2) {
+          return (
+            <Bot
+              key={index}
+              textMarginTop={10}
+              text='Megabot'
+              name='yellow_bot'
+            >
+              <MegaBotIcon fill='#feda32' fullFill={true} />
+            </Bot>
+          );
+        }
         if (index === 1) {
           return (
             <Bot
@@ -71,7 +82,6 @@ const BotList: FC = () => {
         return (
           <Bot
             key={index}
-            textMarginTop={bot.name === 'yellow_bot' ? 10 : undefined}
             text={botNameMap[bot.name].text}
             percent={bot[currentTimeRange]}
             active={bot.name === currentBot.name}
