@@ -10,10 +10,12 @@ const MegaBotIcon: FC<MegaBotIconProps> = ({ fill, fullFill }) => {
     <svg
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
-      width='min(11.47vw, 90px)'
-      height='min(11.47vw, 90px)'
       viewBox='0 0 90 90'
-      style={{ display: 'block' }}
+      style={{
+        display: 'block',
+        width: 'min(calc(90 * var(--adaptive-coefficient)), 90px)',
+        height: 'min(calc(90 * var(--adaptive-coefficient)), 90px)',
+      }}
     >
       {!fullFill && (
         <defs>

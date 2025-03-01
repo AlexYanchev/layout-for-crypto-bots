@@ -37,11 +37,11 @@ const Text = styled.p<{
   $textColor?: string | undefined;
   $textMarginTop?: number | undefined;
 }>`
-  line-height: clamp(1rem, 3.06vw, 1.5rem);
+  line-height: clamp(1rem, calc(24 * var(--adaptive-coefficient)), 24px);
   text-transform: uppercase;
   text-align: center;
 
-  font-size: clamp(0.8rem, 2.55vw, 1.25rem);
+  font-size: clamp(0.8rem, calc(20 * var(--adaptive-coefficient)), 20px);
   color: var(--accent-color);
   font-weight: 700;
   margin-top: 10px;
@@ -94,7 +94,7 @@ const Percent = styled.span<{ $negative?: boolean }>`
 `;
 const Picture = styled.div`
   display: flex;
-  height: min(11.47vw, 90px);
+  height: min(calc(90 * var(--adaptive-coefficient)), 90px);
   align-items: center;
 `;
 

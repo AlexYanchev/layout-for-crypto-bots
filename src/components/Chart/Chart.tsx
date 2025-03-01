@@ -30,7 +30,7 @@ const ResultPercent = styled.div<{ $negative?: boolean | undefined }>`
 
   span {
     color: rgb(var(--positive-result-text-color));
-    font-size: clamp(1.5rem, 5.86vw, 2.875rem);
+    font-size: clamp(1.5rem, calc(46 * var(--adaptive-coefficient)), 46px);
     ${({ $negative }) => {
       return (
         $negative &&
@@ -129,7 +129,8 @@ const Chart: FC = () => {
             }}
             tickMargin={marginBottomTick}
             tick={{
-              fontSize: 'clamp(0.8rem, 2.55vw, 1.25rem)',
+              fontSize:
+                'clamp(0.8rem, calc(20 * var(--adaptive-coefficient)), 20px)',
               fill: '#546076',
               fontWeight: 200,
             }}

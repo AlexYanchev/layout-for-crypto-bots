@@ -8,22 +8,23 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: min(2.55vw, 20px);
+  gap: min(calc(20 * var(--adaptive-coefficient)), 20px);
 `;
 
 const Title = styled.p`
-  font-size: min(3.06vw, 1.5rem);
+  font-size: min(calc(24 * var(--adaptive-coefficient)), 24px);
   color: inherit;
   font-weight: 700;
 `;
 
 const Button = styled.button<{ $active?: boolean }>`
   color: inherit;
-  min-width: min(14.66vw, 115px);
+  min-width: min(calc(115 * var(--adaptive-coefficient)), 115px);
   background: none;
   border-radius: 100px;
-  padding: min(1.53vw, 12px) min(1.91vw, 15px);
-  font-size: min(3.06vw, 1.5rem);
+  padding: min(calc(12 * var(--adaptive-coefficient)), 12px)
+    min(calc(15 * var(--adaptive-coefficient)), 15px);
+  font-size: min(calc(24 * var(--adaptive-coefficient)), 24px);
   font-weight: 400;
   border: 1px solid #546076;
 

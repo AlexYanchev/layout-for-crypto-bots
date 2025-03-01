@@ -5,16 +5,20 @@
 }
 
 :root {
+  --adaptive-for-max-width: 784;
+  --adaptive-coefficient: calc((100vw / var(--adaptive-for-max-width)));
+
   --main-background: #1d2637;
   --top-radial-gradient: #1e3450;
   --main-element-color: #546076;
   --accent-color: #fff;
-  --padding-side: clamp(1rem, 3.82vw, 30px);
 
   --notification-color: 228, 151, 45;
 
   --positive-result-text-color: 120, 166, 89;
   --negative-result-text-color: 210, 68, 122;
+
+  --padding-side: clamp(1rem, calc(30 * var(--adaptive-coefficient)), 30px);
 }
 
 body {
@@ -26,7 +30,6 @@ body {
 
   color: var(--main-element-color);
 
-  /* max-width: 784px; */
   height: 100vh;
   min-width: 375px;
 }

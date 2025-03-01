@@ -5,16 +5,16 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: min(4.46vw, 35px);
-  height: min(4.46vw, 35px);
+  min-width: min(calc(35 * var(--adaptive-coefficient)), 35px);
+  height: min(calc(35 * var(--adaptive-coefficient)), 35px);
   border-radius: 100px;
   background: rgba(var(--notification-color), 1);
   position: absolute;
-  right: max(-1.53vw, -12px);
-  top: max(-2.8vw, -22px);
+  right: max(calc(-12 * var(--adaptive-coefficient)), -12px);
+  top: max(calc(-22 * var(--adaptive-coefficient)), -22px);
   color: var(--accent-color);
-  font-size: min(3.06vw, 1.5rem);
-  line-height: min(3.06vw, 1.5rem);
+  font-size: min(calc(24 * var(--adaptive-coefficient)), 24px);
+  line-height: min(calc(24 * var(--adaptive-coefficient)), 24px);
   font-weight: 600;
 
   & > * {

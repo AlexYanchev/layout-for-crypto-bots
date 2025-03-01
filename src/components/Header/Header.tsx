@@ -10,14 +10,14 @@ const Container = styled.div`
 `;
 
 const HeaderContainer = styled.header`
-  height: min(19.13vw, 150px);
+  height: min(calc(150 * var(--adaptive-coefficient)), 150px);
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 
 const Logo = styled.p`
-  font-size: min(1.5rem, 4.08vw, 2rem);
+  font-size: min(1.5rem, calc(32 * var(--adaptive-coefficient)), 32px);
   font-weight: 700;
 `;
 

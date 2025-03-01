@@ -10,11 +10,11 @@ const Button = styled.button<{ $active?: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: min(1.27vw, 10px);
+  gap: min(calc(10 * var(--adaptive-coefficient)), 10px);
   background: none;
   border: none;
   color: inherit;
-  font-size: min(2.55vw, 1.25rem);
+  font-size: min(calc(20 * var(--adaptive-coefficient)), 20px);
   font-weight: 300;
   cursor: pointer;
 

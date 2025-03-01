@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const Container = styled.div`
   position: relative;
   cursor: pointer;
-  width: min(4.46vw, 35px);
-  height: min(3.06vw, 24px);
+  width: min(calc(35 * var(--adaptive-coefficient)), 35px);
+  height: min(calc(24 * var(--adaptive-coefficient)), 24px);
 `;
 
 const Input = styled.input`
@@ -27,7 +27,8 @@ const Label = styled.label`
 
   &::before {
     top: 0;
-    box-shadow: 0 min(1.4vw, 11px) 0 var(--main-element-color);
+    box-shadow: 0 min(calc(11 * var(--adaptive-coefficient)), 11px) 0
+      var(--main-element-color);
     transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
   }
 
@@ -37,13 +38,13 @@ const Label = styled.label`
   }
 
   ${Input}:checked + &::before {
-    top: 11px;
+    top: clapm(9px, calc(11 * var(--adaptive-coefficient)), 11px);
     transform: rotate(45deg);
-    box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 calc(6 * var(--adaptive-coefficient)) 0 rgba(0, 0, 0, 0);
     transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
   }
   ${Input}:checked + &::after {
-    bottom: 11px;
+    bottom: clapm(9px, calc(11 * var(--adaptive-coefficient)), 11px);
     transform: rotate(-45deg);
     transition: bottom 0.3s, transform 0.3s 0.15s;
   }

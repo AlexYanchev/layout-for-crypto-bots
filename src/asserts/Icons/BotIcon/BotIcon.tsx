@@ -10,10 +10,12 @@ const BotIcon: FC<BotIconProps> = ({ fill, fullFill }) => {
     <svg
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
-      width='min(11.47vw, 90px)'
-      height='min(8.92vw, 70px)'
       viewBox='0 0 90 70'
-      style={{ display: 'block' }}
+      style={{
+        display: 'block',
+        width: 'min(calc(90 * var(--adaptive-coefficient)), 90px)',
+        height: 'min(calc(70 * var(--adaptive-coefficient)), 70px)',
+      }}
     >
       {!fullFill && (
         <defs>

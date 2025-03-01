@@ -8,7 +8,7 @@ import ProfileToolIcon from '../../asserts/Icons/ProfileToolIcon/ProfileToolIcon
 import ButtonTool from '../ButtonTool/ButtonTool';
 
 const Container = styled.div`
-  padding: min(1.65vw, 13px) var(--padding-side);
+  padding: min(calc(13 * var(--adaptive-coefficient)), 13px) var(--padding-side);
   background: #232c3e;
   display: flex;
   align-items: center;

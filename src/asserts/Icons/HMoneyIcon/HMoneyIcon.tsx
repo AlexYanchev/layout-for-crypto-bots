@@ -7,11 +7,12 @@ const HMoneyIcon: FC = () => {
     <svg
       version='1.0'
       xmlns='http://www.w3.org/2000/svg'
-      width='clamp(1rem, 3.82vw, 30px)'
-      height='clamp(1rem, 3.82vw, 30px)'
       viewBox='0 0 30.000000 30.000000'
-      // viewBox='0 0 30.000000 30.000000'
       preserveAspectRatio='xMidYMid meet'
+      style={{
+        width: 'clamp(1rem, calc(30 * var(--adaptive-coefficient)), 30px)',
+        height: 'clamp(1rem, calc(30 * var(--adaptive-coefficient)), 30px)',
+      }}
     >
       <g
         transform='translate(0.000000,30.000000) scale(0.100000,-0.100000)'

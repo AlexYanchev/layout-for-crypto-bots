@@ -5,9 +5,11 @@ const RefreshIcon = () => {
     <svg
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
-      width='min(4.33vw, 34px)'
-      height='min(4.46vw ,35px)'
       viewBox='0 0 34 35'
+      style={{
+        width: 'min(calc(34 * var(--adaptive-coefficient)), 34px)',
+        height: 'min(calc(35 * var(--adaptive-coefficient)) ,35px)',
+      }}
     >
       <path
         fillRule='evenodd'
