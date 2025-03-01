@@ -5,7 +5,6 @@ import BotIcon from '../../asserts/Icons/BotIcon/BotIcon';
 const Container = styled.div<{ $active?: boolean }>`
   aspect-ratio: 1/1;
   width: 100%;
-  height: 100%;
   background: #252d40;
   border-radius: 5px;
   display: flex;
