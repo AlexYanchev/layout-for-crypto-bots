@@ -138,7 +138,6 @@ const Chart: FC = () => {
           />
 
           <YAxis tickCount={horizontalLineCount} hide={true} />
-          <Tooltip />
 
           <Area
             type={cardinal}

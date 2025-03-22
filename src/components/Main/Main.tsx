@@ -12,7 +12,7 @@ const Container = styled.main`
     var(--top-radial-gradient) 5%,
     var(--main-background) 15%
   );
-  min-height: 100vh;
+  height: 100vh;
 `;
 
 const Main: FC = () => {
