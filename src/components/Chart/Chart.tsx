@@ -5,7 +5,6 @@ import {
   XAxis,
   YAxis,
   CartesianGrid,
-  Tooltip,
   ResponsiveContainer,
   ReferenceLine,
   ReferenceDot,
@@ -13,8 +12,6 @@ import {
 import { curveCardinal } from 'd3-shape';
 import styled, { css } from 'styled-components';
 import { useStoreContext } from '../../Providers/StoreProvider';
-import { E_TimeRange } from '../../types/E_TimeRange';
-import { I_Bot } from '../../types/I_Bot';
 
 const Container = styled.div`
   position: relative;
@@ -93,7 +90,7 @@ const Chart: FC = () => {
       <ResultPercent $negative={currentResultPercent < 0}>
         <span>{currentResultPercent}</span>
       </ResultPercent>
-      <ResponsiveContainer width='100%' height={370}>
+      <ResponsiveContainer width='100%' height='100%'>
         <AreaChart
           // width={500}
           // height={400}
